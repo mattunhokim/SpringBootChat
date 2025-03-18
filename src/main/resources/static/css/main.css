@@ -1,0 +1,232 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+}
+
+/* Utility Classes */
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Form Elements */
+.form-control {
+    width: 100%;
+    min-height: 40px;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #5ca8f4;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #1abc9c;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0;
+    color: #fff;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+/* Links */
+a {
+    color: #5ca8f4;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #1abc9c;
+}
+
+/* Buttons */
+button {
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button.default {
+    background-color: #333;
+    color: #fff;
+}
+
+button.primary {
+    background-color: #5ca8f4;
+    color: #fff;
+}
+
+button.accent {
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+/* Username Page */
+#username-page {
+    text-align: center;
+}
+
+.username-page-container {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Chat Page */
+#chat-page {
+    height: 100%;
+}
+
+.chat-container {
+    max-width: 700px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+#chat-page ul {
+    list-style: none;
+    padding: 20px;
+    height: calc(100% - 150px);
+    overflow-y: auto;
+}
+
+#chat-page ul li {
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+#chat-page ul li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#chat-page .chat-message {
+    padding-left: 60px;
+    position: relative;
+}
+
+#chat-page .chat-message i {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    left: 10px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Message Form */
+#messageForm {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#messageForm .input-group input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+#messageForm .input-group button {
+    margin-left: 10px;
+    background: #5ca8f4;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+#messageForm .input-group button:hover {
+    background: #1abc9c;
+}
+
+/* Chat Header */
+.chat-header {
+    text-align: center;
+    padding: 15px;
+    font-size: 1.4em;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Connecting Status */
+.connecting {
+    text-align: center;
+    color: #aaa;
+    position: absolute;
+    top: 65px;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 730px) {
+    .chat-container {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .username-page-container {
+        width: auto;
+        padding: 25px;
+    }
+
+    #chat-page ul {
+        height: calc(100% - 120px);
+    }
+
+    .chat-header {
+        font-size: 1.2em;
+    }
+}
